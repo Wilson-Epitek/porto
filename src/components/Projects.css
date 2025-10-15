@@ -1,0 +1,188 @@
+/* ========================================
+   SECTION PROJETS
+======================================== */
+
+.projects-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* ========================================
+   CARTE PROJET - POSITION FIXE DU BOUTON
+======================================== */
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex; /* 🎯 AJOUT */
+  flex-direction: column; /* 🎯 AJOUT */
+  height: 100%; /* 🎯 AJOUT - Force la hauteur complète */
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4ff, #00ff88);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+}
+
+/* ========================================
+   CONTENU DU PROJET
+======================================== */
+
+.project-content {
+  padding: 2rem;
+  display: flex; /* 🎯 AJOUT */
+  flex-direction: column; /* 🎯 AJOUT */
+  height: 100%; /* 🎯 AJOUT */
+}
+
+.project-card h3 {
+  color: #00d4ff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: auto; /* 🎯 MODIFIÉ - Pousse le bouton en bas */
+  padding-bottom: 1.5rem; /* 🎯 AJOUT - Espace avant le bouton */
+}
+
+.tech-tag {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 212, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* ========================================
+   BOUTON GITHUB - FIXE EN BAS
+======================================== */
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto; /* 🎯 AJOUT - Force le bouton en bas */
+}
+
+.project-link {
+  flex: 1;
+  text-align: center;
+  padding: 0.8rem;
+  background: transparent;
+  border: 2px solid #00d4ff;
+  color: #00d4ff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex; /* 🎯 AJOUT */
+  align-items: center; /* 🎯 AJOUT */
+  justify-content: center; /* 🎯 AJOUT */
+}
+
+.project-link:hover {
+  background: #00d4ff;
+  color: #0a0e27;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.project-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover span {
+  transform: translateX(5px);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 5rem 1rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+}
