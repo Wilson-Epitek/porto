@@ -5,7 +5,7 @@ const Skills = () => {
   const skillsData = [
 
     //  Analyse & Visualisation
-    { name: 'Python (Pandas, NumPy)', level: 70 },
+    { name: 'Python', level: 70 },
     { name: 'Looker Studio', level: 80 },
     { name: 'Excel', level: 60 },
     { name: 'Matplotlib', level: 60 },
