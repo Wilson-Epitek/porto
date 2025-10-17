@@ -9,7 +9,7 @@ const Skills = () => {
     },
     {
       category: 'Bases de Données',
-      skills: ['SQL (MySQL)', 'MongoDB']
+      skills: ['SQL (MySQL)', 'MongoDB', 'PHPMyAdmin']
     },
     {
       category: 'Outils & Technologies',
