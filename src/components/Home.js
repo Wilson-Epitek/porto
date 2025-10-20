@@ -10,7 +10,7 @@ const Home = () => {
         </div>
         <h2 className="subtitle">Étudiant en 2ème année à Epitech Paris</h2>
         <p className="description">
-          Etudiant avec un fort intérêt pour la data. Je recherche ainsi dans ce domaine 
+          Etudiant avec un fort intérêt pour la data. Je recherche ainsi  un stage dans ce domaine 
           à partir de janvier 2026 pour une durée de 4 à 6 mois !
         </p>
         <div className="cta-buttons">
